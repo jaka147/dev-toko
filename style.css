@@ -1,0 +1,69 @@
+.kotak_login{
+	width: 350px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+.padding30px{
+    padding-bottom: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: inherit;
+    -moz-font-feature-settings: "swsh"
+}
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    font-size: 20px;
+    text-transform: uppercase;
+  font-weight: 500px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: lightgreen;
+    color: black;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
