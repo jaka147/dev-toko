@@ -13,14 +13,18 @@
 
 
     <div class="sidebar">
-        <a class="fas fa-tachometer-alt" href="#home">
+        <a class="fas fa-tachometer-alt" href="dasboard.php">
           Dasboard
         </a>
-        <a class=""href="#news">Profil</a>
-        <a href="#contact">Data Harian</a>
-        <a href="#about">Tabungan</a>
-        <a href="">Pengeluaran</a>
-        <a href="">Keluar</a>
+        <a class="far fa-user-circle" href="profil.php">Profil</a>
+        <a class="fas fa-database" href="data.php">Data Harian</a>
+        <a class="fas fa-piggy-bank" href="tabungan.php">Tabungan</a>
+        <a class ="fas fa-coins"href="pengeluaran.php">Pengeluaran</a>
+        <a class ="fas fa-sign-out-alt"href="keluar.php">Keluar</a>
+    </div>
+
+    <div class="content">
+        
     </div>
     
     
