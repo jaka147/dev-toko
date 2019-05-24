@@ -5,6 +5,13 @@
 	margin: 80px auto;
 	padding: 30px 20px;
 }
+.padding20px{
+  margin-top: 20px !important;
+}
+.paddingtop{
+  font-size: 30px;
+  padding-top: 50px;
+}
 .padding30px{
     padding-bottom: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -14,6 +21,7 @@
 body {
     margin: 0;
     font-family: "Lato", sans-serif;
+    overflow: hidden;
   }
   
 .sidebar {
@@ -21,9 +29,9 @@ body {
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
+    position:absolute;
     height: 100%;
-    overflow: auto;
+    overflow: none;
   }
   
   .sidebar a {
@@ -65,5 +73,43 @@ body {
   @media screen and (max-width: 400px) {
     .sidebar a {
       text-align: center;
-      float: none;
+      float: none;}
     }
+
+.kotak_dasboard {
+  position: relative;
+ 
+  border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+      width: 500px !important;
+      height: 300px !important;
+     
+    }
+  .lebarprogres{
+    height: 30px !important;
+    margin-top: 40px !important; 
+  }
+  
+  .progres3{    
+    margin-left: 50px;
+    width: 80%;
+    outline-color: white;
+    align-content: center;
+    outline-style: auto;
+}
+.lebarform{
+  width: 50% !important;
+}
+.lingkaran{
+  background-image: url(picture/pp.jpg);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom: 60px;
+}

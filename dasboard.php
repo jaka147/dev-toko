@@ -4,44 +4,75 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+        
+        <link rel="stylesheet" href="style.css">
         
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="picture/logo-m.png" width="30" height="30" class="d-inline-block align-top mr-2">Minang Jaya</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <body><div>
+        <?Php
+        include ("menu-utama.php");
+        ?></div>
+       <div class="content">
+           <div class="pt-2">
+               <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                   <a class="navbar-brand text-light" href="#">Dasboard</a>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-4 ">
+                    <div class="kotak_dasboard bg-primary">
+                        <div class="paddingtop text-light">Total Dana Masuk</div>
+                        <div class="progress lebarprogres progres3">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            70%
+                            </div>
+                        </div>
+                    <div class="padding20px text-light">Rp.33.000.000</div>
+                    </div>
                 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="form-inline my-2 my-lg-0 ml-5">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
-            <div class="navbar-collapse collapse order-3 dual-collapse2">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <img src="picture/pp.jpg" width="30" height="30" class="img-circle mr-3" alt="Cinque Terre">
-                        <a class="mr-3">Nama Profil</a>
-                    </li>
-                </ul>
+            <div class="col-4">
+                <div class="kotak_dasboard">
+                <div class="kotak_dasboard bg-primary">
+                        <div class="paddingtop text-light">Total Pengeluaran</div>
+                        <div class="progress lebarprogres progres3">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            70%
+                            </div>
+                        </div>
+                    <div class="padding20px text-light">Rp.33.000.000</div>
+                    </div>
+                </div>
             </div>
-        </nav>
+            <div class="col-4">
+                <div class="kotak_dasboard">
+                <div class="kotak_dasboard bg-primary">
+                        <div class="paddingtop text-light">Total Saldo</div>
+                        <div class="progress lebarprogres progres3">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            70%
+                            </div>
+                        </div>
+                    <div class="padding20px text-light">Rp.33.000.000</div>
+                    </div>
+                </div>    
+            </div>
+        </div> 
+        <?php
+            include ("chart.php");
+        ?>
+    </div>
         
-    <?php
-    include ("sidebar.php");
-    ?>
-      
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        </body>
-</html>
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    </html>
