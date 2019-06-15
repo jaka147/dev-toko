@@ -12,7 +12,21 @@
     </head>
     <body><div>
         <?Php
-        include ("menu-utama.php");
+        include ("koneksi.php");
+        include ("menu-utama.php"); 
+        $query= $db->query("SELECT SUM(dana_masuk)AS total_dana_masuk,SUM(dana_keluar)AS total_dana_keluar FROM db_inputdata");
+        $data =mysqli_fetch_array($query);
+        $total_dana_masuk=$data["total_dana_masuk"];
+        $total_dana_keluar=$data["total_dana_keluar"];
+     
+        
+    $query1= $db->query("SELECT SUM(tambah_tabungan)As total_tabungan,SUM(total_penarikan)AS total_penarikan FROM db_tabungan");
+    $data1 =mysqli_fetch_array($query1);
+
+    $tambah_tabungan=$data1["total_tabungan"];
+    $total_penarikan=$data1["total_penarikan"];
+    $total_saldo=$tambah_tabungan-$total_penarikan;
+    $saldo = $total_dana_masuk-$total_dana_keluar-$tambah_tabungan;
         ?></div>
        <div class="content">
            <div class="pt-2">
@@ -24,49 +38,29 @@
                 <div class="col-4 ">
                     <div class="kotak_dasboard bg-primary">
                         <div class="paddingtop text-light">Total Dana Masuk</div>
-                        <div class="progress lebarprogres progres3">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            70%
-                            </div>
-                        </div>
-                    <div class="padding20px text-light">Rp.33.000.000</div>
+                        <div class="padding20px text-light">Rp. <?php echo number_format($total_dana_masuk); ?></div>
                     </div>
-                
-            </div>
-            <div class="col-4">
-                <div class="kotak_dasboard">
-                <div class="kotak_dasboard bg-primary">
-                        <div class="paddingtop text-light">Total Pengeluaran</div>
-                        <div class="progress lebarprogres progres3">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            70%
-                            </div>
+                    
+                </div>
+                <div class="col-4">
+                    <div class="">
+                        <div class="kotak_dasboard bg-primary">
+                            <div class="paddingtop text-light">Total Pengeluaran</div>
+                            <div class="padding20px text-light">Rp. <?php echo number_format($total_dana_keluar); ?></div>
                         </div>
-                    <div class="padding20px text-light">Rp.33.000.000</div>
                     </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="kotak_dasboard">
-                <div class="kotak_dasboard bg-primary">
-                        <div class="paddingtop text-light">Total Saldo</div>
-                        <div class="progress lebarprogres progres3">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            70%
-                            </div>
+                <div class="col-4">
+                    <div class="">
+                        <div class="kotak_dasboard bg-primary">
+                            <div class="paddingtop text-light">Total Saldo</div>
+                            
+                            <div class="padding20px text-light">Rp. <?php echo number_format($saldo); ?></div>
                         </div>
-                    <div class="padding20px text-light">Rp.33.000.000</div>
-                    </div>
-                </div>    
-            </div>
-        </div> 
-        <?php
-            include ("chart.php");
-        ?>
-    </div>
+                    </div>    
+                </div>
+            </div> 
+        </div>
         
         
         <!-- Optional JavaScript -->

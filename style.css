@@ -57,7 +57,7 @@ body {
   div.content {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    height: 22100px;
   }
   
   @media screen and (max-width: 700px) {
@@ -77,14 +77,12 @@ body {
     }
 
 .kotak_dasboard {
-  position: relative;
- 
   border-radius: 10px;
     text-align: center;
     font-size: 30px;
     margin-top: 50px;
     margin-left: 20px;
-      width: 500px !important;
+      width: 400px !important;
       height: 300px !important;
      
     }
@@ -112,4 +110,31 @@ body {
   margin-left: auto;
   margin-right:auto;
   margin-bottom: 60px;
+}
+.dataharian{
+  display: block;
+  color: black;
+  
+}
+.tabungan{
+  position: relative;
+  border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+      width: 95% !important;
+      height: 300px !important;
+     
+    }
+.tengah{
+  position: absolute;
+
+margin-left: -85px;
+left: 50%;
+top: 50%;
+}
+.kata{
+  text-transform: uppercase;
+  font-size: 20px;
 }
